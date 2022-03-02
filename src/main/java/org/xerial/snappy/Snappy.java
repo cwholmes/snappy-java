@@ -73,6 +73,10 @@ public class Snappy
         }
     }
 
+    public static boolean isPureJava() {
+        return impl != null && PureJavaSnappy.class.isAssignableFrom(impl.getClass());
+    }
+
     /**
      * Copy bytes from source to destination
      *
